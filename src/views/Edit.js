@@ -19,7 +19,7 @@ const Edit = ({numbers, setNumbers}) => {
     
     const onSubmit = data => {
         setNumbers(prevData => {
-            let pData = prevData.filter(num => num.id != number.id) 
+            let pData = prevData.filter(num => num.id !== number.id) 
             let nData = [...pData, {id:number.id, ...data}];
             localStorage.setItem('numbers', JSON.stringify(nData))
             return nData;

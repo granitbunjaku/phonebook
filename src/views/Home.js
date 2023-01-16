@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Home = ({numbers, setNumbers}) => {
 
   const deleteFunc = (id) => {
-    let arrOfNumbers = numbers.filter(number => number['id'] != id);
+    let arrOfNumbers = numbers.filter(number => number['id'] !== id);
     setNumbers(arrOfNumbers);
     localStorage.setItem('numbers', JSON.stringify(arrOfNumbers));
   }
